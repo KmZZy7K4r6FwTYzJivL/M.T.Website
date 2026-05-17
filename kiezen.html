@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kiezen op elkaar (Clenching) — Marjoleine Timmer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html#current">Current</a></li>
+    <li><a href="index.html#works">Works</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+<a href="index.html#works" class="back-link">← Back</a>
+
+<main class="work-page">
+    <header class="overlay-header">
+      <div class="overlay-meta-line">
+        <span class="mono">2023 · Installation</span>
+      </div>
+      <h2>Kiezen op elkaar <span class="subtitle">(Clenching)</span></h2>
+    </header>
+
+    <div class="overlay-split">
+      <div class="overlay-text">
+        <p>Kiezen op elkaar (Clenching) is an interactive work consisting of three piles of oversized plaster dentures on the floor — grouped in sets of 3, 4 and 5, each bound by a tension strap — alongside a wall-mounted sculpture of two dentures, held together by straps that trail to the ground, and a poem in Dutch, written directly on the wall, about chewing away your emotions. Visitors are invited to tighten the straps around the floor piles, risking breaking the dentures in the process.</p>
+        <p>The dentures were cast from a mold based on my own teeth, scaled to roughly 1.5 times human size to feel both familiar and generic. The tension straps mimic the act of clenching. The accompanying poem draws on Dutch proverbs like 'even kiezen op elkaar' — literally "putting your molars together" — meaning to suppress what you feel and carry on.</p>
+        <p>The work stems from a personal diagnosis of Temporomandibular Disorder, a condition of the jaw muscles and nerves linked to chronic facial pain and tinnitus, often caused by the physical habit of clenching or grinding teeth in place of processing emotions. I wanted to make that invisible struggle tangible — something you could hold, tighten, and break — because that is exactly what clenching does: it fractures you, physically and mentally.</p>
+      </div>
+
+      <figure class="overlay-side-image">
+        <img src="images/Kiezen_main.jpg" alt="Kiezen op elkaar — main installation view with poem" />
+        <div class="kiezen-pair">
+          <img src="images/Kiezen_overview.jpg" alt="Kiezen op elkaar — overview" />
+          <img src="images/Kiezen_tekst.jpg" alt="Kiezen op elkaar — wall poem detail" class="crop-down" />
+        </div>
+      </figure>
+    </div>
+
+    <div class="kiezen-carousel carousel" data-interval="5000">
+      <div class="carousel-track">
+        <img src="images/Kiezen_carousel_1.jpg" alt="Kiezen op elkaar — installation view" class="carousel-slide active" />
+        <img src="images/Kiezen_carousel_3.jpg" alt="Kiezen op elkaar — installation view" class="carousel-slide" />
+        <img src="images/Kiezen_carousel_5.jpg" alt="Kiezen op elkaar — broken pieces" class="carousel-slide" />
+      </div>
+      <div class="carousel-dots">
+        <button class="dot active" aria-label="Slide 1"></button>
+        <button class="dot" aria-label="Slide 2"></button>
+        <button class="dot" aria-label="Slide 3"></button>
+      </div>
+    </div>
+</main>
+
+<script>
+  document.querySelectorAll('.email-link').forEach((link) => {
+    const user = link.getAttribute('data-u');
+    const domain = link.getAttribute('data-d');
+    const address = user + '\u0040' + domain;
+    link.textContent = address;
+    link.setAttribute('href', 'mailto:' + address);
+  });
+
+  // Carousel: rotate slides on a timer; dots are clickable
+  document.querySelectorAll('.carousel').forEach((carousel) => {
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dots = carousel.querySelectorAll('.dot');
+    const interval = parseInt(carousel.getAttribute('data-interval')) || 5000;
+    let current = 0;
+    let timer = null;
+
+    function show(index) {
+      slides.forEach((s, i) => s.classList.toggle('active', i === index));
+      dots.forEach((d, i) => d.classList.toggle('active', i === index));
+      current = index;
+    }
+
+    function next() {
+      show((current + 1) % slides.length);
+    }
+
+    function start() {
+      stop();
+      timer = setInterval(next, interval);
+    }
+
+    function stop() {
+      if (timer) clearInterval(timer);
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        show(i);
+        start();
+      });
+    });
+
+    carousel.addEventListener('mouseenter', stop);
+    carousel.addEventListener('mouseleave', start);
+
+    start();
+  });
+</script>
+</body>
+</html>

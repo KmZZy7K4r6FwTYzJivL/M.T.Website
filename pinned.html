@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Untitled(pinned) — Marjoleine Timmer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html#current">Current</a></li>
+    <li><a href="index.html#works">Works</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<a href="index.html#works" class="back-link">← Back</a>
+
+<main class="work-page">
+<header class="overlay-header">
+      <div class="overlay-meta-line">
+        <span class="mono">2023 · Bra fillings &amp; Photography</span>
+      </div>
+      <h2>Untitled(pinned)</h2>
+    </header>
+
+    <div class="overlay-split">
+      <div class="overlay-text">
+        <p>The work "Untitled(pinned)" is part of an ongoing research that explores the intricate theme of the patriarchal gaze and analyses and challenges societal notions surrounding the question "What is woman?".</p>
+        <p>The bra-fillings — traditionally associated with the female form — carry connotations of intimacy, vulnerability, as well as the commodification of beauty, whereby the pins convey a sense of discomfort and constraint. They symbolise the societal norms and expectations that women often encounter, serving as reminders of the pressure to conform to certain standards of beauty and behaviour dictated by patriarchal systems.</p>
+        <p>The work invites viewers to examine their own perceptions and assumptions about the concept of womanhood and demonstrates the ongoing need to challenge and reshape cultural narratives that validate objectification and constraint.</p>
+      </div>
+
+      <figure class="overlay-side-image">
+        <img src="images/Untitled_pinned_04_installation.jpg" alt="Untitled (pinned) — installation view" />
+      </figure>
+    </div>
+
+    <div class="overlay-images-three">
+      <figure>
+        <img src="images/Untitled_pinned_02_left.jpg" alt="Untitled (pinned) — side view" />
+      </figure>
+      <figure>
+        <img src="images/Untitled_pinned_01.jpg" alt="Untitled (pinned) — front view" />
+      </figure>
+      <figure>
+        <img src="images/Untitled_pinned_05_detail.jpg" alt="Untitled (pinned) — detail" />
+      </figure>
+</main>
+
+<script>
+  document.querySelectorAll('.email-link').forEach((link) => {
+    const user = link.getAttribute('data-u');
+    const domain = link.getAttribute('data-d');
+    const address = user + '\u0040' + domain;
+    link.textContent = address;
+    link.setAttribute('href', 'mailto:' + address);
+  });
+</script>
+</body>
+</html>

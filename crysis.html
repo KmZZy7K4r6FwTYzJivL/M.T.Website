@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>cry.sis — Marjoleine Timmer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html#current">Current</a></li>
+    <li><a href="index.html#works">Works</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<a href="index.html#works" class="back-link">← Back</a>
+
+<main class="work-page">
+<header class="overlay-header">
+      <div class="overlay-meta-line">
+        <span class="mono">2025 · Moving Image</span>
+      </div>
+      <h2>cry.sis</h2>
+    </header>
+
+    <div class="overlay-text">
+      <p>1 second video work for the One-Off Moving Image Festival 2024, centred around the theme "I cry and I cry".</p>
+      <p>The video was screened from November 15th to 24th 2024 at ten street venues in Copenhagen, Frederiksberg, Christianshavn, Helsingør and Køge.</p>
+    </div>
+
+    <div class="overlay-media">
+      <figure>
+        <video src="images/cry_sis.mp4" controls playsinline preload="metadata" poster="images/cry_sis_thumb.png" loop></video>
+        <figcaption class="mono">cry.sis · 00:01 · loop</figcaption>
+      </figure>
+</main>
+
+<script>
+  document.querySelectorAll('.email-link').forEach((link) => {
+    const user = link.getAttribute('data-u');
+    const domain = link.getAttribute('data-d');
+    const address = user + '\u0040' + domain;
+    link.textContent = address;
+    link.setAttribute('href', 'mailto:' + address);
+  });
+</script>
+</body>
+</html>

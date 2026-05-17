@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Becoming — Marjoleine Timmer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html#current">Current</a></li>
+    <li><a href="index.html#works">Works</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<a href="index.html#works" class="back-link">← Back</a>
+
+<main class="work-page">
+<header class="overlay-header">
+      <div class="overlay-meta-line">
+        <span class="mono">2025 · Installation</span>
+      </div>
+      <h2>Becoming</h2>
+    </header>
+
+    <div class="overlay-split">
+      <div class="overlay-text">
+        <p>A beamed projection passes through mesh fabric on the wall, casting two images of a reflection in a pool of a woman standing in a wedding dress.</p>
+        <p>Three times over, a photograph of a woman floating in water, Ophelia-like, wearing a layer of a wedding dress, holding a bouquet of flowers, placed between eight layers of glass. On the reverse side is a mirrored image. When the light falls through the glass, the image transfers to a woman standing. A different version.</p>
+        <p>For many women today, marriage still marks the end of an existence; the moment they become the property of their husband. But there is also rebirth. Water speaks of new beginnings; we all begin by growing in amniotic fluid. When the light falls through the glass, it is not a woman floating, yet someone standing, a different version.</p>
+      </div>
+
+      <figure class="overlay-side-image">
+        <img src="images/Becoming_02.jpg" alt="Becoming — eight layers of glass photograph" />
+      </figure>
+    </div>
+
+    <div class="overlay-images">
+      <figure>
+        <img src="images/Becoming_04.png" alt="Becoming — image between glass" />
+      </figure>
+      <figure>
+        <img src="images/Becoming_03.png" alt="Becoming — projection on mesh fabric" />
+      </figure>
+</main>
+
+<script>
+  // Email obfuscation (in case there's an email link on this page in future)
+  document.querySelectorAll('.email-link').forEach((link) => {
+    const user = link.getAttribute('data-u');
+    const domain = link.getAttribute('data-d');
+    const address = user + '\u0040' + domain;
+    link.textContent = address;
+    link.setAttribute('href', 'mailto:' + address);
+  });
+</script>
+</body>
+</html>
