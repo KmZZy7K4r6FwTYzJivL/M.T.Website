@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Partymask — Marjoleine Timmer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html#current">Current</a></li>
+    <li><a href="index.html#works">Works</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+<a href="index.html#works" class="back-link">← Back</a>
+
+<main class="work-page">
+    <header class="overlay-header">
+      <div class="overlay-meta-line">
+        <span class="mono">2021 · Yarn &amp; Photography</span>
+      </div>
+      <h2>Partymask</h2>
+    </header>
+
+    <figure class="partymask-image">
+      <img src="images/Partymask_01.jpg" alt="Partymask — figure on couch wearing knitted yarn mask with hanging flags" />
+    </figure>
+
+    <div class="overlay-text" style="margin: 3rem auto 0; max-width: 600px; text-align: center;">
+      <p>Wanna party with me?</p>
+    </div>
+</main>
+
+<script>
+  document.querySelectorAll('.email-link').forEach((link) => {
+    const user = link.getAttribute('data-u');
+    const domain = link.getAttribute('data-d');
+    const address = user + '\u0040' + domain;
+    link.textContent = address;
+    link.setAttribute('href', 'mailto:' + address);
+  });
+</script>
+</body>
+</html>
