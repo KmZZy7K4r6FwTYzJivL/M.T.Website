@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Iteration #1 — Marjoleine Timmer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html#works">Works</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<a href="index.html#works" class="back-link">← Back</a>
+
+<main class="work-page">
+    <header class="overlay-header">
+      <div class="overlay-meta-line">
+        <span class="mono">2026 · Mixed media installation</span>
+      </div>
+      <h2>Iteration #1</h2>
+    </header>
+
+    <div class="overlay-split">
+      <div class="overlay-text">
+        <p>A tunnel of felt, folded over the wall like a skin and covered with knitted breasts, leading to an open space with four projections, creating two walls of 2.44&nbsp;x&nbsp;7&nbsp;m of four ‘isles’ of knitted breasts slowly floating through water, accompanied by a soft sound of knitting machines, a sound that resembles rain. The space filled with dots and objects of knitted breasts. The beamers, cables and speakers were deliberately part of this space, emphasising that the soft knitted breasts are taking over the space.</p>
+        <p>Treated as nothing but breasts, I decided, out of anger at the patriarchy, to cover the world in knitted breasts. But knitting is a slow process. As I worked, the anger gave way to softness: a form of resistance that is less about confrontation and more about celebrating softness and spreading it, to ‘infect’ others and the spaces around them with it.</p>
+      </div>
+
+      <figure class="overlay-side-image">
+        <img src="images/Iteration_01.jpg" alt="Iteration #1 — tunnel of felt covered with knitted breasts" onerror="this.closest('figure').style.display='none';" />
+      </figure>
+    </div>
+
+    <div class="overlay-images">
+      <figure class="wide">
+        <img src="images/Iteration_02.jpg" alt="Iteration #1 — felt tunnel with knitted breasts" onerror="this.closest('figure').style.display='none';" />
+      </figure>
+      <figure class="wide">
+        <img src="images/Iteration_04.jpg" alt="Iteration #1 — tunnel opening onto the projection space" onerror="this.closest('figure').style.display='none';" />
+      </figure>
+      <figure class="wide">
+        <img src="images/Iteration_05.jpg" alt="Iteration #1 — four projections of knitted breasts floating through water" onerror="this.closest('figure').style.display='none';" />
+      </figure>
+      <figure>
+        <img src="images/Iteration_03.jpg" alt="Iteration #1 — detail of knitted breasts on felt" onerror="this.closest('figure').style.display='none';" />
+      </figure>
+      <figure>
+        <img src="images/Iteration_06.jpg" alt="Iteration #1 — hanging object of knitted breasts" onerror="this.closest('figure').style.display='none';" />
+      </figure>
+    </div>
+</main>
+
+<script>
+  document.querySelectorAll('.email-link').forEach((link) => {
+    const user = link.getAttribute('data-u');
+    const domain = link.getAttribute('data-d');
+    const address = user + '\u0040' + domain;
+    link.textContent = address;
+    link.setAttribute('href', 'mailto:' + address);
+  });
+</script>
+</body>
+</html>

@@ -14,7 +14,6 @@
 
 <nav>
   <ul>
-    <li><a href="#current">Current</a></li>
     <li><a href="#works">Works</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -24,14 +23,14 @@
 <header class="hero">
   <h1>Marjoleine Timmer</h1>
 
-  <a href="#current" class="hero-image" aria-label="Scroll to current work">
+  <a href="#works" class="hero-image" aria-label="Scroll to works">
     <img src="images/Intro_photo.jpeg" alt="Portrait work by Marjoleine Timmer"
          onerror="this.style.display='none'; this.parentElement.classList.add('img-missing');" />
     <div class="img-fallback">
       <span class="mono">Image not found</span>
       <p>Expected file: <code>images/Intro_photo.jpeg</code><br />in the images folder next to index.html.</p>
     </div>
-    <span class="hover-cue">↓ View current work</span>
+    <span class="hover-cue">↓ View works</span>
   </a>
 
   <div class="hero-meta">
@@ -44,7 +43,7 @@
   <div class="frame-num-bottom">№ 001 / Index</div>
 </header>
 
-<!-- CURRENT PROJECT -->
+<!-- CURRENT PROJECT (hidden for now; remove the comment markers to show it again)
 <section id="current">
   <div class="section-label">Current</div>
 
@@ -84,12 +83,34 @@
     </div>
   </div>
 </section>
+-->
 
 <!-- WORKS -->
 <section id="works">
   <div class="section-label">Works</div>
 
   <div class="works-grid">
+    <a class="work-card reveal" href="iteration.html">
+      <div class="work-thumb">
+        <img src="images/Iteration_01.jpg" alt="Iteration #1 — mixed media installation by Marjoleine Timmer"
+             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'placeholder-num\'>01</span>';" />
+      </div>
+      <div class="work-info">
+        <h3>Iteration #1</h3>
+        <span class="work-meta">2026 · Mixed media installation</span>
+      </div>
+    </a>
+
+    <a class="work-card reveal" href="youseeillbe.html">
+      <div class="work-thumb">
+        <img src="images/You_see_ill_be_01.jpg" alt="You See I'll Be — dress by Marjoleine Timmer"
+             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'placeholder-num\'>02</span>';" />
+      </div>
+      <div class="work-info">
+        <h3>You See I'll Be</h3>
+        <span class="work-meta">2026 · Dress</span>
+      </div>
+    </a>
     <a class="work-card reveal" href="becoming.html">
       <div class="work-thumb">
         <img src="images/Becoming_01.jpg" alt="Becoming — installation by Marjoleine Timmer"
